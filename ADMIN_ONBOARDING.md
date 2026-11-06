@@ -1,5 +1,11 @@
 # MedFlow platform admin: inviting doctors
 
+Deployment status (7 November 2026): migration 007 has been applied to the
+existing Supabase project with explicit owner approval. `verify_007_checks.sql`
+completed successfully with rollback. Forced RLS and restrictive grants were
+confirmed; there are zero platform administrators and no leftover verification
+accounts. No real account has been granted admin. Onboarding below is still needed.
+
 Audience: the MedFlow team and Codex. Related contract: [AUTH_INTEGRATION.md](AUTH_INTEGRATION.md).
 Operator CLI alternative: [Backend/AUTH_SETUP.md](Backend/AUTH_SETUP.md) (`npm run invite:doctor`).
 

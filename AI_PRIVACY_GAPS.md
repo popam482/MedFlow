@@ -64,6 +64,9 @@ Datele trec deci printr-un filtru, dar acesta nu acoperă identificatorii român
   `checkMedicalAdviceGuardrail` înainte de afișare.
 - Un test care confirmă că ambele sunt apelate pe acest drum.
 - Asta ține de regulile 6 și 8 din [AGENTS.md](AGENTS.md).
+- Interfața MedFlow este acum în română. `checkMedicalAdviceGuardrail` întoarce
+  `suggestedCorrection` în engleză: mesajul pe care îl vede pacientul trebuie dat
+  în română (și în engleză, după `lang`), la fel ca la `detectRedFlags`.
 
 **Notă:** alertele rămân reguli fixe, nu text generat de AI, și nu ordonează
 pacienții după gravitate. Încadrarea lor sub MDR (Regulamentul UE 2017/745) trebuie

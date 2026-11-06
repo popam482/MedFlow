@@ -1,5 +1,13 @@
 # MedFlow - punct principal de continuare
 
+> Supabase: 007/platform_admins aplicata cu aprobarea utilizatorului, verificari
+> SQL cu rollback trecute. Niciun cont nu a primit rol admin; onboarding separat.
+
+> Demo-ul `#/demo/care` este implementat local si verificat de Codex in preluarea
+> temporara de la Claude. Citeste [DEMO_RUNBOOK.md](DEMO_RUNBOOK.md) si
+> [predarea scenariului](Frontend/src/features/care-scenario/HANDOFF.md).
+> Este fixture in memorie; integrarea serviciilor reale ramane separata.
+
 > REVIZUIRE 7 NOIEMBRIE: incepe cu [NEXT_ACTIONS.md](NEXT_ACTIONS.md).
 > Planul Claude a fost citit; rezumat + feedback sunt prioritare, variantele
 > optionale. Frontendul scenariului poate incepe fara a astepta branch-urile Azure.

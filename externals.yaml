@@ -14,7 +14,7 @@ modules:
     branch: main
     dependsOn: []
     build: null
-    reason: Scaffold only; no executable TypeScript package yet.
+    reason: AI and extraction services have separate runtime setup; no package build script on main.
   Backend:
     path: Backend
     repository: https://github.com/AlexM-058/MedFlow-Backend.git
@@ -25,7 +25,7 @@ modules:
   Frontend:
     path: Frontend
     repository: https://github.com/AlexM-058/MedFlow-Frontend.git
-    branch: feat/frontend-foundation
+    branch: main
     dev: dev
     dependsOn: [ Backend ]
     build: build
