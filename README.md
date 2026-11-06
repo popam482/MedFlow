@@ -31,3 +31,15 @@ npm run build -- --install
 
 The [externals manifest](externals.yaml) defines the dependency order. See the
 [build guide](docs/BUILD.md) for targeted builds and rebuilding dependent modules.
+
+For installation, per-module branch selection, local services and Android:
+
+```sh
+python Make.py install
+python Make.py run
+python Make.py branch Frontend feat/ui --create
+python Make.py update Frontend
+python Make.py android --prepare
+```
+
+See the [workspace guide](docs/WORKSPACE.md) and `python Make.py --help`.

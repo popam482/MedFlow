@@ -3,10 +3,20 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import test from 'node:test';
 import { parse } from 'yaml';
-import { parseManifest, planBuild } from './externals-plan.ts';
+import { parseManifest, planBuild, validBranch } from './externals-plan.ts';
 
 const root = resolve(import.meta.dirname, '..');
 const source = () => parse(readFileSync(resolve(root, 'externals.yaml'), 'utf8'));
+
+test('requires valid branches and optional npm dev script names', () => {
+  for (const name of ['main', 'feat/patient-ui', 'release/1.0']) assert.equal(validBranch(name), true);
+  for (const name of ['', '--force', 'bad..name', 'name with spaces', 'a.lock', 'a//b', 'a@{b', 'a:b', 'a\\b']) {
+    assert.equal(validBranch(name), false, name);
+  }
+  const invalid = source();
+  delete invalid.modules.Frontend.branch;
+  assert.throws(() => parseManifest(invalid, root), /branch/);
+});
 
 test('full build orders every dependency before its consumers', () => {
   assert.deepEqual(planBuild(parseManifest(source(), root)), ['Database', 'AI', 'Backend', 'Frontend']);

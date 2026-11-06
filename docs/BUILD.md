@@ -12,7 +12,9 @@ npm run build -- --install
 ```
 
 `externals.yaml` defines module locations, repository URLs, npm build scripts,
-and build dependencies. `.gitmodules` defines Git checkout locations and URLs;
+and build dependencies. It also selects development branches for `Make.py update`;
+see [WORKSPACE.md](WORKSPACE.md) for install, update, branch switching and Android.
+`.gitmodules` defines Git checkout locations and URLs;
 the superproject's gitlinks pin exact commits. The runner checks that the two
 configurations agree and that selected modules are initialized before doing work.
 

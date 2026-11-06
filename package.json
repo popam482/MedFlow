@@ -7,12 +7,14 @@
     "node": ">=22.14.0"
   },
   "scripts": {
-    "externals:sync": "git submodule sync --recursive && git submodule update --init --recursive",
+    "externals:sync": "node --experimental-strip-types scripts/workspace.ts sync",
     "externals:plan": "node --experimental-strip-types scripts/externals.ts plan",
     "externals:install": "node --experimental-strip-types scripts/externals.ts install",
     "build": "node --experimental-strip-types scripts/externals.ts build",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test scripts/externals.test.ts"
+    "test": "node --experimental-strip-types --test scripts/externals.test.ts scripts/workspace.test.ts",
+    "workspace": "node --experimental-strip-types scripts/workspace.ts",
+    "dev": "node --experimental-strip-types scripts/workspace.ts run"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

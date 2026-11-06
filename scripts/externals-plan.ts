@@ -3,6 +3,8 @@ import { isAbsolute, relative, resolve } from 'node:path';
 export interface ExternalModule {
   path: string;
   repository: string;
+  branch: string;
+  dev?: string;
   dependsOn: string[];
   build: string | null;
   reason?: string;
@@ -15,6 +17,14 @@ export interface Manifest {
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+export function validBranch(branch: unknown): branch is string {
+  return typeof branch === 'string' && branch.length > 0 && branch !== '@'
+    && !branch.startsWith('-') && !branch.endsWith('.')
+    && !branch.includes('..') && !branch.includes('@{')
+    && !/[\x00-\x20\x7f~^:?*\[\\]/.test(branch)
+    && branch.split('/').every((part) => part.length > 0 && !part.startsWith('.') && !part.endsWith('.lock'));
 }
 
 export function parseManifest(value: unknown, root: string): Manifest {
@@ -47,12 +57,18 @@ export function parseManifest(value: unknown, root: string): Manifest {
     if (entry.build !== null && (typeof entry.build !== 'string' || !/^[\w:-]+$/.test(entry.build))) {
       throw new Error(`build must be an npm script name or null: ${name}`);
     }
+    if (!validBranch(entry.branch)) throw new Error(`Invalid branch for ${name}.`);
+    if (entry.dev !== undefined && (typeof entry.dev !== 'string' || !/^[\w:-]+$/.test(entry.dev))) {
+      throw new Error(`dev must be an npm script name: ${name}`);
+    }
     if (entry.build === null && (typeof entry.reason !== 'string' || !entry.reason.trim())) {
       throw new Error(`Modules without a build must provide a reason: ${name}`);
     }
     modules[name] = {
       path: entry.path,
       repository: entry.repository,
+      branch: entry.branch,
+      ...(typeof entry.dev === 'string' ? { dev: entry.dev } : {}),
       dependsOn: [...entry.dependsOn],
       build: entry.build,
       ...(typeof entry.reason === 'string' ? { reason: entry.reason } : {}),
