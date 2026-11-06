@@ -20,12 +20,12 @@ modules:
     repository: https://github.com/AlexM-058/MedFlow-Backend.git
     branch: main
     dev: dev
-    dependsOn: [Database, AI]
+    dependsOn: [ Database, AI ]
     build: build
   Frontend:
     path: Frontend
     repository: https://github.com/AlexM-058/MedFlow-Frontend.git
-    branch: main
+    branch: feat/frontend-foundation
     dev: dev
-    dependsOn: [Backend]
+    dependsOn: [ Backend ]
     build: build
