@@ -2,6 +2,9 @@
 
 Privacy-first healthcare communication connecting patients, doctors, and AI.
 
+Start ongoing implementation with [the main handoff](HANDOFF.md): current status,
+remaining work, ownership, verification and the prompt for Claude.
+
 This repository is the Git superproject. Each module is a separate repository,
 pinned to a specific commit through a Git submodule:
 

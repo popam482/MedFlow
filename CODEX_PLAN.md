@@ -1,5 +1,11 @@
 # Codex implementation plan — patient UI and primary integration
 
+> Current allocation: `WORK_ALLOCATION.md` supersedes the historical ownership
+> below. Claude handles most coding; Codex handles connected services and focused
+> integration. The real authentication/QR contract is in `AUTH_INTEGRATION.md`.
+> The patient chat described below now lives at `#/demo/patient`. The default
+> patient route uses Google authentication and server-verified account data.
+
 ## Current handoff status
 
 Patient chat, fluid layout, theme controls, sample suggestion panel and route
