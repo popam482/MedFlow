@@ -119,5 +119,5 @@ obișnuită a echipei.
 - Istoricul modulelor existente este extras din istoricul MedFlow.
 - Branch-ul local `backup/before-submodules` păstrează starea de dinaintea conversiei.
 - AI conține doar structura și instrucțiunile inițiale, fără implementare.
-- `Backend/package.json` conține o eroare de sintaxă preexistentă, care trebuie
-  reparată înainte de instalarea dependențelor sau rularea backend-ului.
+- Actualizarea `updated project structure` din istoricul original este inclusă
+  în module, inclusiv integrarea Supabase și repararea `Backend/package.json`.
