@@ -1,5 +1,15 @@
 # Codex implementation plan — patient UI and primary integration
 
+## Current handoff status
+
+Patient chat, fluid layout, theme controls, sample suggestion panel and route
+shell are implemented. Build/lint pass. Browser checks passed across the six
+planned widths in Light/Dark, with Escape/focus restoration, message retention,
+landscape, 200% text enlargement, system theme changes and hash navigation.
+Screenshots are local under output/playwright. Doctor integration remains pending
+Claude's index.ts export and HANDOFF.md; the optional module hook is prepared.
+No backend or medical-data services were connected.
+
 ## Scope and ownership
 
 Codex is primary. Claude independently owns `Frontend/src/features/doctor/**`;
