@@ -1,12 +1,12 @@
 [submodule "Frontend"]
 	path = Frontend
-	url = ../MedFlow-Frontend.git
+	url = https://github.com/AlexM-058/MedFlow-Frontend.git
 [submodule "Backend"]
 	path = Backend
-	url = ../MedFlow-Backend.git
+	url = https://github.com/AlexM-058/MedFlow-Backend.git
 [submodule "Database"]
 	path = Database
-	url = ../MedFlow-Database.git
+	url = https://github.com/AlexM-058/MedFlow-Database.git
 [submodule "AI"]
 	path = AI
-	url = ../MedFlow-AI.git
+	url = https://github.com/AlexM-058/MedFlow-AI.git

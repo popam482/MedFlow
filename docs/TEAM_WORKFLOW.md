@@ -4,10 +4,10 @@ MedFlow este superproject-ul care fixează commit-ul fiecărui modul:
 
 | Folder | Repository GitHub | Responsabilitate |
 | --- | --- | --- |
-| Frontend | popam482/MedFlow-Frontend | React, TypeScript, Vite |
-| Backend | popam482/MedFlow-Backend | Node.js, Express, TypeScript |
-| Database | popam482/MedFlow-Database | Schema PostgreSQL și migrări |
-| AI | popam482/MedFlow-AI | TypeScript, edge și cloud |
+| Frontend | AlexM-058/MedFlow-Frontend | React, TypeScript, Vite |
+| Backend | AlexM-058/MedFlow-Backend | Node.js, Express, TypeScript |
+| Database | AlexM-058/MedFlow-Database | Schema PostgreSQL și migrări |
+| AI | AlexM-058/MedFlow-AI | TypeScript, edge și cloud |
 
 Cele patru persoane pot prelua câte un modul. Fiecare lucrează în propria clonă,
 pe un branch propriu, și deschide un pull request în repository-ul modulului.
@@ -23,10 +23,10 @@ Acestea creează repository-uri private; accesul colegilor se acordă separat.
 ```powershell
 gh auth login
 gh auth setup-git
-gh repo create popam482/MedFlow-Frontend --private
-gh repo create popam482/MedFlow-Backend --private
-gh repo create popam482/MedFlow-Database --private
-gh repo create popam482/MedFlow-AI --private
+gh repo create AlexM-058/MedFlow-Frontend --private
+gh repo create AlexM-058/MedFlow-Backend --private
+gh repo create AlexM-058/MedFlow-Database --private
+gh repo create AlexM-058/MedFlow-AI --private
 ```
 
 Dacă un repository există deja, verifică proprietarul și conținutul înainte de

@@ -7,10 +7,10 @@ pinned to a specific commit through a Git submodule:
 
 | Path | Repository |
 | --- | --- |
-| `Frontend/` | `popam482/MedFlow-Frontend` |
-| `Backend/` | `popam482/MedFlow-Backend` |
-| `Database/` | `popam482/MedFlow-Database` |
-| `AI/` | `popam482/MedFlow-AI` |
+| `Frontend/` | `AlexM-058/MedFlow-Frontend` |
+| `Backend/` | `AlexM-058/MedFlow-Backend` |
+| `Database/` | `AlexM-058/MedFlow-Database` |
+| `AI/` | `AlexM-058/MedFlow-AI` |
 
 After the initial publication of all module repositories:
 
