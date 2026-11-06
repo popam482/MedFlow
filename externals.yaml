@@ -1,0 +1,25 @@
+# Exact revisions are pinned by Git submodules, not by branch names here.
+version: 1
+modules:
+  Database:
+    path: Database
+    repository: https://github.com/AlexM-058/MedFlow-Database.git
+    dependsOn: []
+    build: null
+    reason: SQL sources only; migrations require a separate explicit command.
+  AI:
+    path: AI
+    repository: https://github.com/AlexM-058/MedFlow-AI.git
+    dependsOn: []
+    build: null
+    reason: Scaffold only; no executable TypeScript package yet.
+  Backend:
+    path: Backend
+    repository: https://github.com/AlexM-058/MedFlow-Backend.git
+    dependsOn: [Database, AI]
+    build: build
+  Frontend:
+    path: Frontend
+    repository: https://github.com/AlexM-058/MedFlow-Frontend.git
+    dependsOn: [Backend]
+    build: build

@@ -21,3 +21,13 @@ git clone --recurse-submodules https://github.com/popam482/MedFlow.git
 See [the team workflow](docs/TEAM_WORKFLOW.md) for initial publication, access,
 branches, pull requests, and version updates. Each module contains its own
 `AGENTS.md` and credential exclusions for standalone development.
+
+Build the integrated project with Node.js >= 22.14:
+
+```sh
+npm ci
+npm run build -- --install
+```
+
+The [externals manifest](externals.yaml) defines the dependency order. See the
+[build guide](docs/BUILD.md) for targeted builds and rebuilding dependent modules.
