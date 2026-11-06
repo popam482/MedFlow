@@ -7,3 +7,8 @@ dist/
 .venv/
 __pycache__/
 .cursor/worktrees/
+**/node_modules/
+**/dist/
+**/.env
+**/.env.*
+!**/.env.example
