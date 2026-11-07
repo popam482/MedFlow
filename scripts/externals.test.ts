@@ -48,6 +48,6 @@ test('rejects unsafe paths, duplicate paths and unexplained missing builds', () 
   duplicate.modules.AI.path = 'Database';
   assert.throws(() => parseManifest(duplicate, root), /Duplicate/);
   const missingReason = source();
-  delete missingReason.modules.AI.reason;
+  delete missingReason.modules.Database.reason;
   assert.throws(() => parseManifest(missingReason, root), /reason/);
 });

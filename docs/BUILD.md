@@ -23,10 +23,12 @@ These are orchestration dependencies: they do not automatically link npm package
 generate clients, copy artifacts, or create shared TypeScript contracts. Add real
 integration steps to each module's own npm build script as implementation grows.
 
-AI currently contains documentation only; Database contains SQL sources. Their
-`build: null` entries report the reason explicitly. Database migrations are never
-applied by the build command. Once AI has a package and lockfile, set its `build`
-to its npm script name and add the required build configuration in the AI repo.
+Database contains SQL sources only; its `build: null` entry reports the reason
+explicitly, and migrations are never applied by the build command. AI's `build`
+script type-checks its TypeScript (`tsc`, no output files). It must run before
+Backend, because the build installs AI's dependencies (`npm ci`) only for modules
+with a `build` script, and Backend compiles the AI orchestrator it imports from
+`../AI`; without `AI/node_modules`, that compile fails with TS2307.
 
 ## Commands
 

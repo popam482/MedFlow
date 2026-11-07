@@ -13,8 +13,7 @@ modules:
     repository: https://github.com/AlexM-058/MedFlow-AI.git
     branch: main
     dependsOn: []
-    build: null
-    reason: Scaffold only; no executable TypeScript package yet.
+    build: build
   Backend:
     path: Backend
     repository: https://github.com/AlexM-058/MedFlow-Backend.git
