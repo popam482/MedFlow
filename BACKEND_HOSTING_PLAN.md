@@ -1,5 +1,11 @@
 # MedFlow — plan Backend, date reale și hosting
 
+> **Actualizare (7 nov 2026): Azure nu mai este varianta pentru MVP.** Secțiunea 3 și deciziile D1–D3
+> (Static Web Apps, Container Apps, `deploy/azure`) sunt depășite și rămân doar ca istoric.
+> MVP-ul de la 10:30 rulează ca mockup cu agenți AI locali (`AI_URL` și `MEDGEMMA_URL` spre această
+> mașină). Interfața rămâne pe Vercel, iar backend-ul pe Render, dacă mai e nevoie de un URL public.
+> Rămân valabile secțiunile 2 (Backend nou) și 4 (date sintetice, fără date reale până la DPIA).
+
 Autor: Claude. Stare: **propunere, fără cod.** Completează [DEMO_IMPLEMENTATION_PLAN.md](DEMO_IMPLEMENTATION_PLAN.md).
 Cititori: echipa, Codex și colegii de Backend, AI și Azure.
 
