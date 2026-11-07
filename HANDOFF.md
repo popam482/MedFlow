@@ -1,5 +1,27 @@
 # MedFlow - punct principal de continuare
 
+> ACTUALIZARE: modificarile Frontend, Backend si AI pentru confirmarea finala
+> „Adauga in dosar” si contextul local al intrebarilor sunt publicate pe main.
+> Gateway-ul a fost repornit si raporteaza gemma3:4b. Vezi
+> [contractul de context local](AI/local/INTAKE_CONTEXT.md).
+> Notele de mai jos pastreaza istoricul etapelor anterioare.
+
+> AGENT LOCAL: [LOCAL_AGENT_SETUP.md](LOCAL_AGENT_SETUP.md). Ollama + gemma3:1b
+> instalate; gateway protejat pe 8092 si tunel temporar HTTPS verificate cu mesaje
+> sintetice. Client/rute Backend si butoane UI pregatite, inca nepublicate.
+> Vercel public foloseste inca localhost pentru API; necesita variabila Render
+> si redeploy. Configuratia server pentru Render este in AI/local/.env.render,
+> ignorat de Git; nu afisati tokenul. MedGemma/extractorul raman separate.
+
+> CONTEXT PERSISTENT: [PATIENT_CONTEXT_INTEGRATION.md](PATIENT_CONTEXT_INTEGRATION.md).
+> Alergii/afectiuni/medicamente declarate, sursa, confirmare si istoric actiuni;
+> citire la medic in dosarul autorizat. Cod verificat local/cu API simulat,
+> fara migrari sau scrieri live Supabase.
+
+> DOSARE FARA AI: vezi [CASES_INTEGRATION.md](CASES_INTEGRATION.md). Router nou
+> de liste/mesaje/feedback si UI conectat la API in conturile reale. Cod pregatit,
+> verificat local/cu API simulat; utilizatorul a ales fara test live acum.
+
 > Supabase: 007/platform_admins aplicata cu aprobarea utilizatorului, verificari
 > SQL cu rollback trecute. Niciun cont nu a primit rol admin; onboarding separat.
 
